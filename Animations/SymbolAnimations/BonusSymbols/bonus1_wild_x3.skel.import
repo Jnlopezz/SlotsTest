@@ -1,0 +1,13 @@
+[remap]
+
+importer="spine.skel"
+type="SpineSkeletonFileResource"
+path="res://.import/bonus1_wild_x3.skel-576f0dd329c8a34d88d99a5b02ecd92d.spskel"
+
+[deps]
+
+source_file="res://Animations/SymbolAnimations/BonusSymbols/bonus1_wild_x3.skel"
+dest_files=[ "res://.import/bonus1_wild_x3.skel-576f0dd329c8a34d88d99a5b02ecd92d.spskel" ]
+
+[params]
+

@@ -1,0 +1,102 @@
+wild_multiplier_v9.webp
+size:1005,977
+filter:Linear,Linear
+Arm extended
+bounds:908,357,149,72
+rotate:90
+Background Payline
+bounds:606,71,300,300
+Fire
+bounds:908,61,65,141
+offsets:2,0,67,143
+Fire d
+bounds:606,373,300,300
+Frame
+bounds:606,675,300,300
+Rope
+bounds:967,788,36,187
+WILD Text
+bounds:908,204,151,61
+rotate:90
+Wild Text Glow
+bounds:908,508,172,80
+rotate:90
+f_east
+bounds:908,682,57,293
+f_north
+bounds:2,2,300,67
+f_south
+bounds:605,6,298,63
+f_west
+bounds:304,5,64,299
+rotate:90
+smoke
+bounds:304,373,300,300
+smoke 2
+bounds:304,71,300,300
+smoke3
+bounds:304,675,300,300
+x128x200
+bounds:2,71,300,300
+x2-x5
+bounds:2,373,300,300
+x8-x64
+bounds:2,675,300,300
+
+wild_multiplier_v9_2.webp
+size:1024,884
+filter:Linear,Linear
+Bottle glow
+bounds:2,258,204,254
+rotate:90
+Fire a
+bounds:826,2,300,194
+rotate:90
+Fire b
+bounds:706,304,300,150
+Fire c
+bounds:2,464,300,117
+Hand And Bottle
+bounds:747,456,236,275
+rotate:90
+red glow
+bounds:258,244,282,186
+teal glow
+bounds:542,116,282,186
+x1
+bounds:2,732,160,150
+x128
+bounds:304,432,249,148
+x16
+bounds:164,583,203,148
+x2
+bounds:847,731,169,151
+x200
+bounds:555,317,263,149
+rotate:90
+x3
+bounds:505,732,167,150
+x32
+bounds:369,582,216,148
+x4
+bounds:674,734,171,148
+x5
+bounds:164,733,167,149
+x64
+bounds:587,582,216,148
+x8
+bounds:333,735,170,147
+yellow glow
+bounds:2,56,282,186
+
+wild_multiplier_v9_3.webp
+size:606,908
+filter:Linear,Linear
+128-200
+bounds:304,606,300,300
+8-64
+bounds:2,2,300,300
+Background Fire
+bounds:2,304,300,300
+Background Normal
+bounds:2,606,300,300

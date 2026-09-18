@@ -1,0 +1,15 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+path="res://.import/hud.tpsheet-7d6267eb778ae7ace5efc9cf19d8c760.res"
+
+[deps]
+
+files=[ "res://Visuals/Sprites/hud.sprites/bg_circle.tres", "res://Visuals/Sprites/hud.sprites/infinity.tres", "res://Visuals/Sprites/hud.sprites/spin_arrows.tres", "res://Visuals/Sprites/hud.sprites/history_on.tres", "res://Visuals/Sprites/hud.sprites/PopUpFrame.tres", "res://Visuals/Sprites/hud.sprites/histroy_off.tres", "res://Visuals/Sprites/hud.sprites/info.tres", "res://Visuals/Sprites/hud.sprites/home.tres", "res://Visuals/Sprites/hud.sprites/turbo_off.tres", "res://Visuals/Sprites/hud.sprites/turbo_on.tres", "res://Visuals/Sprites/hud.sprites/autoplay_stop.tres", "res://Visuals/Sprites/hud.sprites/close.tres", "res://Visuals/Sprites/hud.sprites/autospin_off.tres", "res://Visuals/Sprites/hud.sprites/sound_off.tres", "res://Visuals/Sprites/hud.sprites/autospin_on.tres", "res://Visuals/Sprites/hud.sprites/burger.tres", "res://Visuals/Sprites/hud.sprites/settings_off.tres", "res://Visuals/Sprites/hud.sprites/sound_on.tres", "res://Visuals/Sprites/hud.sprites/add_bet.tres", "res://Visuals/Sprites/hud.sprites/minus_bet.tres", "res://Visuals/Sprites/hud.sprites/settings_on.tres", "res://Visuals/Sprites/hud.sprites/chevron.tres", "res://Visuals/Sprites/hud.sprites/paytable.tres", "res://Visuals/Sprites/hud.sprites/stop.tres" ]
+
+source_file="res://Visuals/Sprites/hud.tpsheet"
+dest_files=[ "res://.import/hud.tpsheet-7d6267eb778ae7ace5efc9cf19d8c760.res", "res://Visuals/Sprites/hud.sprites/bg_circle.tres", "res://Visuals/Sprites/hud.sprites/infinity.tres", "res://Visuals/Sprites/hud.sprites/spin_arrows.tres", "res://Visuals/Sprites/hud.sprites/history_on.tres", "res://Visuals/Sprites/hud.sprites/PopUpFrame.tres", "res://Visuals/Sprites/hud.sprites/histroy_off.tres", "res://Visuals/Sprites/hud.sprites/info.tres", "res://Visuals/Sprites/hud.sprites/home.tres", "res://Visuals/Sprites/hud.sprites/turbo_off.tres", "res://Visuals/Sprites/hud.sprites/turbo_on.tres", "res://Visuals/Sprites/hud.sprites/autoplay_stop.tres", "res://Visuals/Sprites/hud.sprites/close.tres", "res://Visuals/Sprites/hud.sprites/autospin_off.tres", "res://Visuals/Sprites/hud.sprites/sound_off.tres", "res://Visuals/Sprites/hud.sprites/autospin_on.tres", "res://Visuals/Sprites/hud.sprites/burger.tres", "res://Visuals/Sprites/hud.sprites/settings_off.tres", "res://Visuals/Sprites/hud.sprites/sound_on.tres", "res://Visuals/Sprites/hud.sprites/add_bet.tres", "res://Visuals/Sprites/hud.sprites/minus_bet.tres", "res://Visuals/Sprites/hud.sprites/settings_on.tres", "res://Visuals/Sprites/hud.sprites/chevron.tres", "res://Visuals/Sprites/hud.sprites/paytable.tres", "res://Visuals/Sprites/hud.sprites/stop.tres" ]
+
+[params]
+

@@ -1,0 +1,183 @@
+{
+	"textures": [
+		{
+			"image": "paylines.webp",
+			"size": {
+				"w": 2048,
+				"h": 2048
+			},
+			"sprites": [
+				{
+					"filename": "payline01",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 986,
+						"h": 52
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "payline02",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 986,
+						"h": 52
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "payline03",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 986,
+						"h": 52
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "payline10",
+					"region": {
+						"x": 989,
+						"y": 1,
+						"w": 978,
+						"h": 434
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "payline11",
+					"region": {
+						"x": 1,
+						"y": 55,
+						"w": 978,
+						"h": 434
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "payline06",
+					"region": {
+						"x": 981,
+						"y": 437,
+						"w": 970,
+						"h": 235
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "payline07",
+					"region": {
+						"x": 1,
+						"y": 491,
+						"w": 970,
+						"h": 235
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "payline08",
+					"region": {
+						"x": 973,
+						"y": 674,
+						"w": 961,
+						"h": 273
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "payline09",
+					"region": {
+						"x": 1,
+						"y": 728,
+						"w": 961,
+						"h": 273
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "payline04",
+					"region": {
+						"x": 964,
+						"y": 949,
+						"w": 915,
+						"h": 531
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "payline05",
+					"region": {
+						"x": 1,
+						"y": 1482,
+						"w": 915,
+						"h": 531
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:37adbd3fee2f48a733b098d42ff85972:517da89cf9b1b83d03a4d13ce871528c:8f1598580b5b9e035448c985fd2b55c1$"
+	}
+}

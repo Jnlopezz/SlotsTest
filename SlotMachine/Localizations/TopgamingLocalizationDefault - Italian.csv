@@ -1,0 +1,72 @@
+key,it
+button.change,Modifica
+button.information,Informazione
+button.language,Lingua
+button.paytable,Tabella dei pagamenti
+button.save,Salva
+button.start-autoplay,Avvia la riproduzione automatica
+button.volume,Volume
+caption.audio-settings,IMPOSTAZIONI AUDIO
+caption.autoplay-settings,IMPOSTAZIONI DI RIPRODUZIONE AUTOMATICA
+caption.game-rules,REGOLE DEL GIOCO
+caption.language,LINGUA
+error.insuficient-credit,Senza soldi
+error.insuficient-credit-message,Per favore deposita più soldi per continuare a giocare
+info.replay-intro-header,Questo round è stato giocato
+label.bet,Scommessa
+label.copied,Copiato
+lam.congratulations-img,CongratulationsItalian
+label.copy,copia
+label.credit,Credito
+label.date-and-time,Data e ora
+label.effects,Effetti
+label.free-respin,Respin gratuito
+label.free-spins,Giri gratuiti
+label.game-info,Informazioni del gioco
+label.game-pays,VITTORIA TOTALE
+label.game-settings,Impostazioni di gioco
+label.multiplier,Moltiplicatore
+label.music,Musica
+label.nr-autospins,Numero di giri automatici
+label.paytable,Tabella dei pagamenti
+label.player-history,Storia del giocatore
+label.quick-spin,Giro veloce
+label.result,Risultato
+label.settings,Impostazioni
+label.share,Condividere
+label.stop-on-bonus,Interrompi se viene vinta la funzione bonus
+label.top-multiplier,I migliori moltiplicatori
+label.top-win,Le migliori vittorie
+label.top-win-global,La migliore vittoria globale
+label.top-wins-global,I migliori vincono a livello globale
+label.watch,Orologio
+label.win,Vincita
+message.click-anywhere,Fare clic in un punto qualsiasi per continuare
+message.click-for-respin,Fare clic per un respin gratuito
+message.congratulation,Congratulazioni
+message.do-better,Potresti fare di meglio
+message.greeting,Buona fortuna!
+message.max-payout-reached,Pagamento massimo raggiunto!
+message.press-spin,Fare clic su Gira per iniziare
+message.won-free-spins,Hai vinto {importo} giri gratuiti
+mgd.info-devil-spins-1,Tre o quattro SCATTER attivano GIRI GRATIS.
+mgd.info-devil-spins-2,SCATTERS aggiuntivi assegnano GIRI GRATUITI extra
+mgd.info-devil-spins-3,Sostituisce tutti i simboli tranne SCATTER.
+mgd.info-devil-spins-4,Vinci di più con STICKY WILDS
+mgd.info-gamerules,"{b}Informazioni{/b} {fill}Tutte le vincite pagano da sinistra a destra, a condizione che appaiano su rulli adiacenti e a partire dal rullo più a sinistra. Viene pagata solo la vincita più alta per modalità di vincita. Tutte le vincite derivanti dalle modalità vincenti vengono sommate. Una volta che i rulli si fermano, tutte le combinazioni vincenti verranno evidenziate. Tutti i valori di pagamento dei simboli nella tabella dei pagamenti vengono visualizzati nella stessa valuta della scommessa piazzata. La tabella dei pagamenti riflette il valore attuale della scommessa. I malfunzionamenti annullano tutte le vincite e le giocate.{fill}"
+mgd.info-gamerules-2,"{b}Azioni{/b} {color=#FFBF00}SCOMMESSA{/color} L'importo scommesso in ogni round. {color=#FFBF00}CREDITO{/color} Il saldo disponibile per giocare. {color=#FFBF00}DIMENSIONE PUNTATA{/color} Per modificare l'importo della scommessa, utilizza {IMG-PLUS} {IMG-MINUS}. {color=#FFBF00}GIRA/BARRA SPAZIATRICE{/color} Fai clic su {IMG-GIRA} o premi la barra spaziatrice per iniziare un round di gioco. {color=#FFBF00}GIOCO AUTOMATICO{/color} Fai clic su GIOCO AUTOMATICO {IMG-AUTOPLAY} per impostare un certo numero di round automatici. {color=#FFBF00}GIRO RAPIDO{/color} Il flag LIGHTNING {IMG-QUICKSPIN}, se selezionato, ti consente di impostare una velocità di rotazione più elevata. {color=#FFBF00}SUONO{/color} Fai clic sul pulsante {IMG-SUONO} per regolare il volume della musica e degli effetti sonori. {color=#FFBF00}MENU{/color} Fai clic sul pulsante {IMG-BURGERMENU} per modificare le impostazioni e visualizzare la tabella dei pagamenti, la cronologia del gioco e le informazioni sul gioco."
+mgd.info-gamerules-3,{b}Informazioni sul gioco{/b} Scommessa minima: {GAMEINFO-MINBET} Scommessa massima: {GAMEINFO-MAXBET} RTP: {GAMEINFO-SIMRTP} Volatilità: alta Versione client di gioco: {GAMEINFO-CLIENTVERSION}
+mgd.info-gamerules-4,"{b}Regole del gioco{/b} {fill}Magic Devil è una video slot a 6 rulli con da 576 a 147.456 modi di vincere. Il gioco ha un simbolo Scatter, un simbolo Wild e quattro simboli Alti e quattro Bassi. Il Wild sostituisce tutti gli altri simboli tranne lo Scatter. I Giri Gratis vengono giocati con la puntata del giro che li ha attivati. {color=#FFBF00}Bonus Wild Respin{/color} Stacked Wild sui rulli 1 e 6 assegna un Respin gratuito sui rulli da 2 a 5. Gli Stacked Wild sui rulli 1 e 6 saranno permanenti per quel respin. Il Respin gratuito fa atterrare simboli Wild casuali con moltiplicatori x1, x2, x3, x4 sui rulli da 2 a 5. I Wild moltiplicatori sono trattati come modi: x2 è 2 Wild, x3 è 3 Wild, x4 è 4 Wild."
+mgd.info-gamerules-5,"{b}Regole del gioco{/b} {fill}{color=#FFBF00}Devil Spins Bonus{/color} 3 o 4 simboli Scatter attivano i Free Spins. 3 Scatter assegnano 5 giri gratuiti iniziali. 4 Scatter assegnano 8 giri gratuiti iniziali. Durante il bonus, viene assegnato un giro gratuito aggiuntivo per ogni Scatter ottenuto. I simboli Wild che atterrano nel Bonus Devil Spins sono permanenti fino al termine dei giri gratuiti.{/fill} {fill}{color=#FFBF00}Magic Devil Bonus{/color} L'atterraggio di entrambi i simboli Wild in pila sui rulli 1 e 6 e 3 o più Scatter si attiva il bonus del diavolo magico. 3 Scatter assegnano 5 giri gratuiti iniziali. 4 Scatter assegnano 8 giri gratuiti iniziali. Durante il bonus, viene assegnato un giro gratuito aggiuntivo per ogni Scatter ottenuto. Gli Sticky Wild moltiplicatori vengono assegnati in modo casuale sui rulli da 2 a 5.{/fill} {fill}I Wild che compaiono durante i giochi bonus assegnano in modo casuale moltiplicatori extra (x2, x3, x4) in grado di aumentare la vincita.{/fill}"
+mgd.info-gamerules-portrait-1,"{b}Regole del gioco{/b} {fill}Magic Devil è una video slot a 6 rulli. Il gioco ha un simbolo Scatter, un simbolo Wild e quattro simboli alti e quattro bassi. Il Wild sostituisce tutti gli altri simboli tranne lo Scatter. I Giri Gratis vengono giocati con la puntata del giro che li ha attivati. {color=#FFBF00}Bonus Wild Respin{/color} Stacked Wild sui rulli 1 e 6 assegna un Respin gratuito sui rulli da 2 a 5. Gli Stacked Wild sui rulli 1 e 6 saranno permanenti per quel respin. Il Respin gratuito fa atterrare simboli Wild casuali con moltiplicatori x1, x2, x3, x4 sui rulli da 2 a 5. {fill}{color=#FFBF00}Devil Spins Bonus{/color} 3 o più simboli Scatter attivano i Free Spins. 3 Scatter assegnano 5 giri gratuiti iniziali. 4 Scatter assegnano 8 giri gratuiti iniziali. Per ogni Scatter aggiuntivo viene assegnato un giro gratuito aggiuntivo. I simboli Wild che atterrano nel Bonus Devil Spins sono permanenti fino al termine dei giri gratuiti. {/fill} {fill}{color=#FFBF00}Magic Devil Bonus{/color} Ottenere entrambi gli Stacked Wild sui rulli 1 e 6 e 3 o più Scatter attiva il Magic Devil Bonus. 3 Scatter assegnano 5 giri gratuiti iniziali. 4 Scatter assegnano 8 giri gratuiti iniziali. Gli Sticky Wild moltiplicatori vengono assegnati in modo casuale sui rulli da 2 a 5. Durante il bonus, viene assegnato un giro gratuito aggiuntivo per ogni Scatter ottenuto.{/fill}"
+mgd.info-magic-devil-1,Impila Wilds e 3 o 4 SCATTERS per attivare GIRI GRATUITI
+mgd.info-magic-devil-2,Giri gratuiti EXTRA sugli scatter
+mgd.info-magic-devil-3,JOLLY MOLTIPLICATORE ADESIVI PER GRANDI VINCITE FINO A
+mgd.info-magic-devil-4,30.000x
+mgd.info-paytable,Tutte le vincite pagano da sinistra a destra purché appaiano su rulli adiacenti. Tutte le vincite derivanti dalle modalità vincenti vengono sommate. Viene pagata solo la vincita più alta per modalità di vincita.
+mgd.info-wild-respin-1,I WILD IMPILATI sui rulli 1 e 6 attivano il RESPIN GRATUITO
+mgd.info-wild-respin-2,Vinci alla GRANDE con i WILD MOLTIPLICATORI
+mgd.mgd92-sim,"91,79%"
+mgd.mgd94-sim,"93,78%"
+mgd.mgd96-sim,"96,15%"
+value.time-at,A

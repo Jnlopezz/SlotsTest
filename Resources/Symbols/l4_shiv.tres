@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://SlotMachine/Scripts/SymbolData.gd" type="Script" id=1]
+[ext_resource path="res://Animations/SymbolAnimations/L2-Shiv.tres" type="SpineSkeletonDataResource" id=2]
+[ext_resource path="res://Visuals/Sprites/symbols_static_temp/l2.webp" type="Texture" id=3]
+[ext_resource path="res://Visuals/Sprites/symbols_blur.sprites/l2.tres" type="Texture" id=4]
+
+[resource]
+script = ExtResource( 1 )
+image_path = "res://Visuals/Sprites/symbols_static.sprites/l2_shiv.tres"
+image_static = ExtResource( 3 )
+image_blur = ExtResource( 4 )
+is_pseudo = false
+rect_size = 200.0
+animation_data = ExtResource( 2 )
+defaultAnimationName = "anim"

@@ -1,0 +1,15 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+path="res://.import/symbols_blur.tpsheet-03e5481388b37d0fb3e62a79e37e71ae.res"
+
+[deps]
+
+files=[ "res://Visuals/Sprites/symbols_blur.sprites/h1.tres", "res://Visuals/Sprites/symbols_blur.sprites/h3.tres", "res://Visuals/Sprites/symbols_blur.sprites/l2.tres", "res://Visuals/Sprites/symbols_blur.sprites/l3.tres", "res://Visuals/Sprites/symbols_blur.sprites/l5.tres", "res://Visuals/Sprites/symbols_blur.sprites/l4.tres", "res://Visuals/Sprites/symbols_blur.sprites/h5.tres", "res://Visuals/Sprites/symbols_blur.sprites/Bonus.tres", "res://Visuals/Sprites/symbols_blur.sprites/l1.tres", "res://Visuals/Sprites/symbols_blur.sprites/h2.tres", "res://Visuals/Sprites/symbols_blur.sprites/wild.tres", "res://Visuals/Sprites/symbols_blur.sprites/h4.tres" ]
+
+source_file="res://Visuals/Sprites/symbols_blur.tpsheet"
+dest_files=[ "res://.import/symbols_blur.tpsheet-03e5481388b37d0fb3e62a79e37e71ae.res", "res://Visuals/Sprites/symbols_blur.sprites/h1.tres", "res://Visuals/Sprites/symbols_blur.sprites/h3.tres", "res://Visuals/Sprites/symbols_blur.sprites/l2.tres", "res://Visuals/Sprites/symbols_blur.sprites/l3.tres", "res://Visuals/Sprites/symbols_blur.sprites/l5.tres", "res://Visuals/Sprites/symbols_blur.sprites/l4.tres", "res://Visuals/Sprites/symbols_blur.sprites/h5.tres", "res://Visuals/Sprites/symbols_blur.sprites/Bonus.tres", "res://Visuals/Sprites/symbols_blur.sprites/l1.tres", "res://Visuals/Sprites/symbols_blur.sprites/h2.tres", "res://Visuals/Sprites/symbols_blur.sprites/wild.tres", "res://Visuals/Sprites/symbols_blur.sprites/h4.tres" ]
+
+[params]
+

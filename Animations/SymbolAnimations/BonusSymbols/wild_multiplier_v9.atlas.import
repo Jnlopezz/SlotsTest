@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+path="res://.import/wild_multiplier_v9.atlas-2859e7f5ba171c6059d1067dccce7953.spatlas"
+
+[deps]
+
+source_file="res://Animations/SymbolAnimations/BonusSymbols/wild_multiplier_v9.atlas"
+dest_files=[ "res://.import/wild_multiplier_v9.atlas-2859e7f5ba171c6059d1067dccce7953.spatlas" ]
+
+[params]
+
+normal_map_prefix="n"

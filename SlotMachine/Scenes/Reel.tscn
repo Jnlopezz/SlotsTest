@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://SlotMachine/Scripts/Reel.gd" type="Script" id=1]
+[ext_resource path="res://SlotMachine/Scenes/Symbol.tscn" type="PackedScene" id=2]
+
+[node name="Reel" type="Control"]
+margin_right = 126.0
+margin_bottom = 379.0
+script = ExtResource( 1 )
+symbol_prefab = ExtResource( 2 )
+dark_color = Color( 0.141176, 0.137255, 0.137255, 1 )
+tintDuration = 0.1
+symbol_size = 126.0
+startTransition = 1
+startEase = 0
+startSpeed = 0.2
+stopTransition = 5
+stopEase = 1
+stopSpeed = 1.0
+pseudoReelIndexes = [ 0, 1, 2, 3, 4, 5, 0, 1, 2, 3 ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -10.0
+margin_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_constants/separation = 0

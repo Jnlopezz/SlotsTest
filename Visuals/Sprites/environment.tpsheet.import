@@ -1,0 +1,15 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+path="res://.import/environment.tpsheet-de9dd1707688e44a3301302b2623bc4f.res"
+
+[deps]
+
+files=[ "res://Visuals/Sprites/environment.sprites/P_frontwall.tres", "res://Visuals/Sprites/environment.sprites/helicopter.tres", "res://Visuals/Sprites/environment.sprites/cloud.tres", "res://Visuals/Sprites/environment.sprites/logo_desktop.tres", "res://Visuals/Sprites/environment.sprites/SirenPole.tres", "res://Visuals/Sprites/environment.sprites/barbed wire.tres", "res://Visuals/Sprites/environment.sprites/blades.tres", "res://Visuals/Sprites/environment.sprites/circle_light.tres", "res://Visuals/Sprites/environment.sprites/lamp.tres", "res://Visuals/Sprites/environment.sprites/back_propellor.tres", "res://Visuals/Sprites/environment.sprites/leg.tres", "res://Visuals/Sprites/environment.sprites/light_cone.tres", "res://Visuals/Sprites/environment.sprites/bulb.tres" ]
+
+source_file="res://Visuals/Sprites/environment.tpsheet"
+dest_files=[ "res://.import/environment.tpsheet-de9dd1707688e44a3301302b2623bc4f.res", "res://Visuals/Sprites/environment.sprites/P_frontwall.tres", "res://Visuals/Sprites/environment.sprites/helicopter.tres", "res://Visuals/Sprites/environment.sprites/cloud.tres", "res://Visuals/Sprites/environment.sprites/logo_desktop.tres", "res://Visuals/Sprites/environment.sprites/SirenPole.tres", "res://Visuals/Sprites/environment.sprites/barbed wire.tres", "res://Visuals/Sprites/environment.sprites/blades.tres", "res://Visuals/Sprites/environment.sprites/circle_light.tres", "res://Visuals/Sprites/environment.sprites/lamp.tres", "res://Visuals/Sprites/environment.sprites/back_propellor.tres", "res://Visuals/Sprites/environment.sprites/leg.tres", "res://Visuals/Sprites/environment.sprites/light_cone.tres", "res://Visuals/Sprites/environment.sprites/bulb.tres" ]
+
+[params]
+

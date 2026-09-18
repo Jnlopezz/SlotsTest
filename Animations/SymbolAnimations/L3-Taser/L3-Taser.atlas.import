@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+path="res://.import/L3-Taser.atlas-811eb311b55b7eda8a98a241488ea98f.spatlas"
+
+[deps]
+
+source_file="res://Animations/SymbolAnimations/L3-Taser/L3-Taser.atlas"
+dest_files=[ "res://.import/L3-Taser.atlas-811eb311b55b7eda8a98a241488ea98f.spatlas" ]
+
+[params]
+
+normal_map_prefix="n"

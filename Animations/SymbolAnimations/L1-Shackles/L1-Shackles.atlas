@@ -1,0 +1,27 @@
+L1-Shackles.webp
+size:908,560
+filter:Linear,Linear
+1
+bounds:629,2,107,138
+rotate:90
+1 glow
+bounds:337,75,140,178
+2
+bounds:769,9,106,124
+rotate:90
+2.5 glow
+bounds:479,92,148,161
+3.5
+bounds:2,69,177,184
+Background
+bounds:2,255,300,300
+Glow light
+bounds:304,255,300,300
+Right chain
+bounds:629,111,131,142
+chain
+bounds:762,117,110,136
+chainlight
+bounds:181,75,154,178
+l1
+bounds:606,255,300,300

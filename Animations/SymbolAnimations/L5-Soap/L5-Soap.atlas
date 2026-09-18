@@ -1,0 +1,52 @@
+L5-Soap.webp
+size:908,476
+filter:Linear,Linear
+Back Bubble Tiny
+bounds:899,73,5,5
+Back Bubbles Mid
+bounds:435,19,11,11
+Back Bubbles Small
+bounds:474,36,14,23
+Back bubbles large
+bounds:870,35,27,43
+Background
+bounds:2,173,300,300
+Blade
+bounds:822,75,96,46
+rotate:90
+Bubbles on soap
+bounds:677,84,143,87
+Front bubble big
+bounds:870,137,32,34
+Front bubble small
+bounds:456,42,16,17
+Front bubbles mid
+bounds:498,45,37,37
+Front bubbles mid2
+bounds:415,36,23,24
+rotate:90
+Front bubbles set1
+bounds:441,32,13,27
+Front bubbles set2
+bounds:456,13,12,27
+POP
+bounds:382,32,31,27
+Soap
+bounds:213,46,167,125
+Water
+bounds:498,84,87,177
+rotate:90
+Water lines
+bounds:382,61,110,114
+rotate:90
+l5
+bounds:304,173,300,300
+light
+bounds:606,173,300,300
+outerglow
+bounds:2,2,209,169
+shimmer
+bounds:870,80,55,30
+rotate:90
+sparkle
+bounds:415,10,18,24

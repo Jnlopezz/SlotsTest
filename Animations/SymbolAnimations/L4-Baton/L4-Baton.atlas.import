@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+path="res://.import/L4-Baton.atlas-7f835d3102b9f9b1e4d486dcbbe7eb61.spatlas"
+
+[deps]
+
+source_file="res://Animations/SymbolAnimations/L4-Baton/L4-Baton.atlas"
+dest_files=[ "res://.import/L4-Baton.atlas-7f835d3102b9f9b1e4d486dcbbe7eb61.spatlas" ]
+
+[params]
+
+normal_map_prefix="n"

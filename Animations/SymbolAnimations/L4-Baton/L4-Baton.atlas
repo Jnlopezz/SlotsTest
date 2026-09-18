@@ -1,0 +1,31 @@
+L4-Baton.webp
+size:908,484
+filter:Linear,Linear
+Base Background
+bounds:2,182,300,300
+Handle
+bounds:537,60,120,131
+rotate:90
+Highlight 3
+bounds:792,77,103,99
+rotate:90
+Highlight a
+bounds:2,18,162,172
+rotate:90
+Highlight a2
+bounds:670,67,113,120
+rotate:90
+Lightning a1
+bounds:366,30,169,150
+Lightning a2
+bounds:176,29,188,151
+Middle rod
+bounds:792,2,73,79
+rotate:90
+Top rod
+bounds:670,3,62,68
+rotate:90
+l4
+bounds:304,182,300,300
+light
+bounds:606,182,300,300

@@ -1,0 +1,9 @@
+[gd_resource type="SpineSkeletonDataResource" load_steps=3 format=2]
+
+[ext_resource path="res://Animations/SymbolAnimations/BonusSymbols/wild_multiplier_v9.atlas" type="SpineAtlasResource" id=1]
+[ext_resource path="res://Animations/SymbolAnimations/BonusSymbols/bonus1_wild_x5.skel" type="SpineSkeletonFileResource" id=2]
+
+[resource]
+atlas_res = ExtResource( 1 )
+skeleton_file_res = ExtResource( 2 )
+default_mix = 0.03

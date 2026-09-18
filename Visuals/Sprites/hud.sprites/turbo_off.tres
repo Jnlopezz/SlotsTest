@@ -1,0 +1,9 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=2]
+
+[ext_resource path="res://Visuals/Sprites/hud.webp" type="Texture" id=1]
+
+[resource]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 935, 1, 63, 115 )
+margin = Rect2( 96, 70, 193, 141 )

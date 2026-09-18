@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+path="res://.import/L5-Soap.atlas-22605a33095c6b9992f8ec88a19a7a73.spatlas"
+
+[deps]
+
+source_file="res://Animations/SymbolAnimations/L5-Soap/L5-Soap.atlas"
+dest_files=[ "res://.import/L5-Soap.atlas-22605a33095c6b9992f8ec88a19a7a73.spatlas" ]
+
+[params]
+
+normal_map_prefix="n"

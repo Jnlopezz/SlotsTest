@@ -1,0 +1,13 @@
+[remap]
+
+importer="spine.skel"
+type="SpineSkeletonFileResource"
+path="res://.import/L5-Soap.skel-5d83c960720340c24ef758bcda18c0b6.spskel"
+
+[deps]
+
+source_file="res://Animations/SymbolAnimations/L5-Soap/L5-Soap.skel"
+dest_files=[ "res://.import/L5-Soap.skel-5d83c960720340c24ef758bcda18c0b6.spskel" ]
+
+[params]
+

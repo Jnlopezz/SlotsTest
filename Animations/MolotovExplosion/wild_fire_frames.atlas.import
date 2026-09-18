@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+path="res://.import/wild_fire_frames.atlas-bc2d2ca7e0c088a46c1f8ad81a8a7779.spatlas"
+
+[deps]
+
+source_file="res://Animations/MolotovExplosion/wild_fire_frames.atlas"
+dest_files=[ "res://.import/wild_fire_frames.atlas-bc2d2ca7e0c088a46c1f8ad81a8a7779.spatlas" ]
+
+[params]
+
+normal_map_prefix="n"

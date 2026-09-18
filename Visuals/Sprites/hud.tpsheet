@@ -1,0 +1,378 @@
+{
+	"textures": [
+		{
+			"image": "hud.webp",
+			"size": {
+				"w": 1024,
+				"h": 1024
+			},
+			"sprites": [
+				{
+					"filename": "bg_circle",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 256,
+						"h": 256
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "infinity",
+					"region": {
+						"x": 259,
+						"y": 1,
+						"w": 246,
+						"h": 112
+					},
+					"margin": {
+						"x": 5,
+						"y": 72,
+						"w": 10,
+						"h": 144
+					}
+				},
+				{
+					"filename": "spin_arrows",
+					"region": {
+						"x": 507,
+						"y": 1,
+						"w": 244,
+						"h": 236
+					},
+					"margin": {
+						"x": 6,
+						"y": 10,
+						"w": 12,
+						"h": 20
+					}
+				},
+				{
+					"filename": "history_on",
+					"region": {
+						"x": 259,
+						"y": 115,
+						"w": 184,
+						"h": 180
+					},
+					"margin": {
+						"x": 36,
+						"y": 38,
+						"w": 72,
+						"h": 76
+					}
+				},
+				{
+					"filename": "PopUpFrame",
+					"region": {
+						"x": 445,
+						"y": 115,
+						"w": 32,
+						"h": 34
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "histroy_off",
+					"region": {
+						"x": 1,
+						"y": 259,
+						"w": 184,
+						"h": 180
+					},
+					"margin": {
+						"x": 36,
+						"y": 38,
+						"w": 72,
+						"h": 76
+					}
+				},
+				{
+					"filename": "info",
+					"region": {
+						"x": 187,
+						"y": 259,
+						"w": 66,
+						"h": 150
+					},
+					"margin": {
+						"x": 95,
+						"y": 53,
+						"w": 190,
+						"h": 106
+					}
+				},
+				{
+					"filename": "home",
+					"region": {
+						"x": 753,
+						"y": 1,
+						"w": 180,
+						"h": 168
+					},
+					"margin": {
+						"x": 38,
+						"y": 44,
+						"w": 76,
+						"h": 88
+					}
+				},
+				{
+					"filename": "turbo_off",
+					"region": {
+						"x": 935,
+						"y": 1,
+						"w": 63,
+						"h": 115
+					},
+					"margin": {
+						"x": 96,
+						"y": 70,
+						"w": 193,
+						"h": 141
+					}
+				},
+				{
+					"filename": "turbo_on",
+					"region": {
+						"x": 935,
+						"y": 118,
+						"w": 63,
+						"h": 115
+					},
+					"margin": {
+						"x": 96,
+						"y": 70,
+						"w": 193,
+						"h": 141
+					}
+				},
+				{
+					"filename": "autoplay_stop",
+					"region": {
+						"x": 753,
+						"y": 171,
+						"w": 169,
+						"h": 177
+					},
+					"margin": {
+						"x": 46,
+						"y": 42,
+						"w": 87,
+						"h": 79
+					}
+				},
+				{
+					"filename": "close",
+					"region": {
+						"x": 924,
+						"y": 235,
+						"w": 91,
+						"h": 91
+					},
+					"margin": {
+						"x": 82,
+						"y": 82,
+						"w": 165,
+						"h": 165
+					}
+				},
+				{
+					"filename": "autospin_off",
+					"region": {
+						"x": 445,
+						"y": 239,
+						"w": 169,
+						"h": 177
+					},
+					"margin": {
+						"x": 44,
+						"y": 40,
+						"w": 87,
+						"h": 79
+					}
+				},
+				{
+					"filename": "sound_off",
+					"region": {
+						"x": 616,
+						"y": 239,
+						"w": 127,
+						"h": 119
+					},
+					"margin": {
+						"x": 67,
+						"y": 68,
+						"w": 129,
+						"h": 137
+					}
+				},
+				{
+					"filename": "autospin_on",
+					"region": {
+						"x": 255,
+						"y": 297,
+						"w": 169,
+						"h": 177
+					},
+					"margin": {
+						"x": 44,
+						"y": 40,
+						"w": 87,
+						"h": 79
+					}
+				},
+				{
+					"filename": "burger",
+					"region": {
+						"x": 1,
+						"y": 441,
+						"w": 167,
+						"h": 118
+					},
+					"margin": {
+						"x": 44,
+						"y": 69,
+						"w": 89,
+						"h": 138
+					}
+				},
+				{
+					"filename": "settings_off",
+					"region": {
+						"x": 745,
+						"y": 350,
+						"w": 162,
+						"h": 162
+					},
+					"margin": {
+						"x": 47,
+						"y": 47,
+						"w": 94,
+						"h": 94
+					}
+				},
+				{
+					"filename": "sound_on",
+					"region": {
+						"x": 616,
+						"y": 360,
+						"w": 120,
+						"h": 127
+					},
+					"margin": {
+						"x": 68,
+						"y": 64,
+						"w": 136,
+						"h": 129
+					}
+				},
+				{
+					"filename": "add_bet",
+					"region": {
+						"x": 909,
+						"y": 350,
+						"w": 105,
+						"h": 105
+					},
+					"margin": {
+						"x": 75,
+						"y": 75,
+						"w": 151,
+						"h": 151
+					}
+				},
+				{
+					"filename": "minus_bet",
+					"region": {
+						"x": 909,
+						"y": 457,
+						"w": 105,
+						"h": 32
+					},
+					"margin": {
+						"x": 75,
+						"y": 112,
+						"w": 151,
+						"h": 224
+					}
+				},
+				{
+					"filename": "settings_on",
+					"region": {
+						"x": 426,
+						"y": 418,
+						"w": 162,
+						"h": 162
+					},
+					"margin": {
+						"x": 47,
+						"y": 47,
+						"w": 94,
+						"h": 94
+					}
+				},
+				{
+					"filename": "chevron",
+					"region": {
+						"x": 590,
+						"y": 489,
+						"w": 143,
+						"h": 200
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "paytable",
+					"region": {
+						"x": 170,
+						"y": 476,
+						"w": 137,
+						"h": 152
+					},
+					"margin": {
+						"x": 59,
+						"y": 52,
+						"w": 119,
+						"h": 104
+					}
+				},
+				{
+					"filename": "stop",
+					"region": {
+						"x": 1,
+						"y": 561,
+						"w": 119,
+						"h": 119
+					},
+					"margin": {
+						"x": 68,
+						"y": 68,
+						"w": 137,
+						"h": 137
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:c91eae3241aa66988fa85db448e52bf9:7ebac0e3f9efec3c846fb64969f6b23a:b51d4fe39f9fd6273639dcc25afe742d$"
+	}
+}

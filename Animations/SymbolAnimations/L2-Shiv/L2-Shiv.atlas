@@ -1,0 +1,36 @@
+L2-Shiv.webp
+size:928,572
+filter:Linear,Linear
+Background
+bounds:2,267,300,300
+Bandage Big
+bounds:667,16,74,47
+Bandage small
+bounds:463,15,54,21
+Blood splatter
+bounds:240,17,248,221
+rotate:90
+Blood stain 1
+bounds:796,82,80,127
+rotate:90
+Blood stain 2
+bounds:796,164,123,101
+Glow bot
+bounds:843,31,67,49
+Glow light
+bounds:304,267,300,300
+Glow top
+bounds:667,65,95,73
+Shimmer
+bounds:667,140,127,125
+Shiv
+bounds:463,38,227,202
+rotate:90
+Shiv outer glow
+bounds:2,4,261,236
+rotate:90
+Sparkle
+bounds:764,2,78,77
+rotate:90
+l2
+bounds:606,267,300,300

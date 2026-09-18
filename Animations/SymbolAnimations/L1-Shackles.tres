@@ -1,0 +1,13 @@
+[gd_resource type="SpineSkeletonDataResource" load_steps=4 format=2]
+
+[ext_resource path="res://Animations/SymbolAnimations/L1-Shackles/L1-Shackles.skel" type="SpineSkeletonFileResource" id=1]
+[ext_resource path="res://Animations/SymbolAnimations/L1-Shackles/L1-Shackles.atlas" type="SpineAtlasResource" id=2]
+
+[sub_resource type="SpineAnimationMix" id=1]
+from = "idle"
+to = "anim"
+
+[resource]
+atlas_res = ExtResource( 2 )
+skeleton_file_res = ExtResource( 1 )
+animation_mixes = [ SubResource( 1 ) ]

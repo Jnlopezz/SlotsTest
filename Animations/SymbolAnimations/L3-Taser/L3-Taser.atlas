@@ -1,0 +1,43 @@
+L3-Taser.webp
+size:820,752
+filter:Linear,Linear
+Background
+bounds:2,449,300,300
+Bandage
+bounds:770,450,79,47
+offsets:0,0,80,47
+rotate:90
+Bandage Glow
+bounds:730,34,90,59
+rotate:90
+Glow Light
+bounds:304,449,300,300
+Lightning Big
+bounds:606,531,172,218
+Lightning Small a
+bounds:535,307,60,75
+Lightning Small copy
+bounds:653,64,60,75
+rotate:90
+Lightning glow
+bounds:526,4,120,125
+rotate:90
+Red button
+bounds:535,384,62,63
+Strap
+bounds:184,5,107,140
+Strap Glow
+bounds:2,2,143,180
+rotate:90
+String glow
+bounds:304,15,220,139
+Taser
+bounds:606,278,251,162
+rotate:90
+Taser outerglow
+bounds:535,126,251,150
+l3
+bounds:2,147,300,300
+outer glow
+bounds:304,156,291,229
+rotate:90

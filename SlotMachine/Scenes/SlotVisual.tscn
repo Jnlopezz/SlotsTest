@@ -1,0 +1,107 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://SlotMachine/Scripts/SlotVisual.gd" type="Script" id=2]
+[ext_resource path="res://SlotMachine/Scenes/Reel.tscn" type="PackedScene" id=3]
+
+[node name="SlotVisual" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource( 2 )
+reelContainer = NodePath("SlotArea/HBoxContainer")
+
+[node name="SlotArea" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SlotArea"]
+modulate = Color( 0.882353, 0.882353, 0.929412, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 2
+
+[node name="Reel1" parent="SlotArea/HBoxContainer" instance=ExtResource( 3 )]
+margin_right = 382.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+__meta__ = {
+"_editor_description_": ""
+}
+dark_color = Color( 0.709804, 0.662745, 0.662745, 1 )
+symbol_size = 256.0
+baseZOrder = 4
+startTransition = 10
+startSpeed = 0.3
+stopTransition = 9
+stopSpeed = 0.25
+pseudoReelIndexes = [ 3, 4, 2, 1, 4, 0, 1, 2, 0, 0 ]
+
+[node name="Reel2" parent="SlotArea/HBoxContainer" instance=ExtResource( 3 )]
+margin_left = 384.0
+margin_right = 766.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+__meta__ = {
+"_editor_description_": ""
+}
+dark_color = Color( 0.709804, 0.662745, 0.662745, 1 )
+symbol_size = 256.0
+baseZOrder = 3
+startTransition = 10
+startSpeed = 0.3
+stopTransition = 9
+stopSpeed = 0.25
+pseudoReelIndexes = [ 3, 4, 2, 1, 4, 0, 1, 2, 0, 0 ]
+
+[node name="Reel3" parent="SlotArea/HBoxContainer" instance=ExtResource( 3 )]
+margin_left = 768.0
+margin_right = 1151.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+__meta__ = {
+"_editor_description_": ""
+}
+dark_color = Color( 0.709804, 0.662745, 0.662745, 1 )
+symbol_size = 256.0
+baseZOrder = 2
+startTransition = 10
+startSpeed = 0.3
+stopTransition = 9
+stopSpeed = 0.25
+pseudoReelIndexes = [ 3, 4, 2, 1, 4, 0, 1, 2, 0, 0 ]
+
+[node name="Reel4" parent="SlotArea/HBoxContainer" instance=ExtResource( 3 )]
+margin_left = 1153.0
+margin_right = 1535.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+__meta__ = {
+"_editor_description_": ""
+}
+dark_color = Color( 0.709804, 0.662745, 0.662745, 1 )
+symbol_size = 256.0
+baseZOrder = 1
+startTransition = 10
+startSpeed = 0.3
+stopTransition = 9
+stopSpeed = 0.25
+pseudoReelIndexes = [ 3, 4, 2, 1, 4, 0, 1, 2, 0, 0 ]
+
+[node name="Reel5" parent="SlotArea/HBoxContainer" instance=ExtResource( 3 )]
+margin_left = 1537.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+__meta__ = {
+"_editor_description_": ""
+}
+dark_color = Color( 0.709804, 0.662745, 0.662745, 1 )
+symbol_size = 256.0
+startTransition = 10
+startSpeed = 0.3
+stopTransition = 9
+stopSpeed = 0.25
+pseudoReelIndexes = [ 3, 4, 2, 1, 4, 0, 1, 2, 0, 0 ]

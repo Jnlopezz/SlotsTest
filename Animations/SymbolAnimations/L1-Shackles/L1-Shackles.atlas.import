@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+path="res://.import/L1-Shackles.atlas-12013d68809eee4b36603fad723d07a4.spatlas"
+
+[deps]
+
+source_file="res://Animations/SymbolAnimations/L1-Shackles/L1-Shackles.atlas"
+dest_files=[ "res://.import/L1-Shackles.atlas-12013d68809eee4b36603fad723d07a4.spatlas" ]
+
+[params]
+
+normal_map_prefix="n"

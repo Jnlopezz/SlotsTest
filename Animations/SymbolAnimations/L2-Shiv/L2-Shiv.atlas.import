@@ -1,0 +1,14 @@
+[remap]
+
+importer="spine.atlas"
+type="SpineAtlasResource"
+path="res://.import/L2-Shiv.atlas-fd28f7326e077ca0a530843e8ad8a405.spatlas"
+
+[deps]
+
+source_file="res://Animations/SymbolAnimations/L2-Shiv/L2-Shiv.atlas"
+dest_files=[ "res://.import/L2-Shiv.atlas-fd28f7326e077ca0a530843e8ad8a405.spatlas" ]
+
+[params]
+
+normal_map_prefix="n"

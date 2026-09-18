@@ -1,0 +1,72 @@
+key,en
+button.change,Change
+button.information,Information
+button.language,Language
+button.paytable,Paytable
+button.save,Save
+button.start-autoplay,Start autoplay
+button.volume,Volume
+caption.audio-settings,AUDIO SETTINGS
+caption.autoplay-settings,AUTOPLAY SETTINGS
+caption.game-rules,GAME RULES
+caption.language,LANGUAGE
+error.insuficient-credit,Out of Money
+error.insuficient-credit-message,Please deposit more money to continue playing
+info.replay-intro-header,This round was played
+label.bet,Bet
+lam.congratulations-img,CongratulationsEnglish
+label.copied,Copied
+label.copy,Copy
+label.credit,Credit
+label.date-and-time,Date and time
+label.effects,Effects
+label.free-respin,Free Respin
+label.free-spins,Free Spins
+label.game-info,Game Info
+label.game-pays,TOTAL WIN
+label.game-settings,Game Settings
+label.multiplier,Multiplier
+label.music,Music
+label.nr-autospins,Number of autospins
+label.paytable,Paytable
+label.player-history,Player History
+label.quick-spin,Quick spin
+label.result,Result
+label.settings,Settings
+label.share,Share
+label.stop-on-bonus,Stop if bonus feature won
+label.top-multiplier,Top Multipliers
+label.top-win,Top Wins
+label.top-win-global,Top Win Global
+label.top-wins-global,Top Wins Global
+label.watch,Watch
+label.win,Win
+message.click-anywhere,Click anywhere to continue
+message.click-for-respin,Click for free respin
+message.congratulation,Congratulations
+message.do-better,You could do better
+message.greeting,Good luck!
+message.max-payout-reached,Max payout reached!
+message.press-spin,Click Spin to begin
+message.won-free-spins,You won {amount} free spins
+mgd.info-devil-spins-1,Three or four SCATTERS trigger FREE SPINS.
+mgd.info-devil-spins-2,Additional SCATTERS award extra FREE SPINS
+mgd.info-devil-spins-3,Substitutes for all symbols except SCATTER.
+mgd.info-devil-spins-4,Win more with STICKY WILDS
+mgd.info-gamerules,"{b}Information{/b} {fill}All wins pay left to right, provided they appear on adjacent reels, and beginning with the left-most reel. Only highest win paid per winning way. All winnings from winning ways are added together. Once the reels land, any winning combinations will be highlighted. All symbol payout values in paytable are displayed in the same currency as bet placed. Paytable reflects current bet value. Malfunctions void all pays and plays.{fill}"
+mgd.info-gamerules-2,"{b}Actions{/b} {color=#FFBF00}BET{/color} The amount wagered each round. {color=#FFBF00}CREDIT{/color} The balance available to play. {color=#FFBF00}BET SIZE{/color} To change the size of the bet, use the {IMG-PLUS} {IMG-MINUS}. {color=#FFBF00}SPIN / SPACEBAR{/color} Click {IMG-SPIN} or press spacebar to start a game round. {color=#FFBF00}AUTOPLAY{/color} Click AUTOPLAY {IMG-AUTOPLAY} to set a certain amount of automatic rounds. {color=#FFBF00}QUICK SPIN{/color} The LIGHTNING {IMG-QUICKSPIN} flag, if selected, allows you to set a higher spinning speed. {color=#FFBF00}SOUND{/color} Click the {IMG-SOUND} button to adjust the music and sound effect volumes. {color=#FFBF00}MENU{/color} Click the {IMG-BURGERMENU} button to change the settings, and view the paytable, game history and game information."
+mgd.info-gamerules-3,{b}Game Information{/b} Minimum bet: {GAMEINFO-MINBET} Maximum Bet: {GAMEINFO-MAXBET} RTP: {GAMEINFO-SIMRTP} Volatility: High Game Client Version: {GAMEINFO-CLIENTVERSION}
+mgd.info-gamerules-4,"{b}Game Rules{/b} {fill}Magic Devil is a 6-reel video slot game with 576 to 147,456 ways to win. The game has a Scatter symbol, a Wild symbol, and four High and four Low symbols. The Wild substitutes for all other symbols except Scatter. Free Spins are played at the bet of the triggering spin. {color=#FFBF00}Wild Respin Bonus{/color} Stacked Wilds on reels 1 and 6 award a Free Respin on reels 2 to 5. The Stacked Wilds on reel 1 and 6 will be sticky for that respin. The Free Respin randomly lands Wilds with x1, x2, x3, x4 Multipliers on reels 2 to 5. Multiplier Wilds are treated as ways: x2 is 2 Wilds, x3 is 3 Wilds, x4 is 4 Wilds."
+mgd.info-gamerules-5,"{b}Game Rules{/b} {fill}{color=#FFBF00}Devil Spins Bonus{/color} 3 or 4 Scatter symbols trigger Free Spins. 3 Scatters award an initial 5 Free spins. 4 Scatters award an initial 8 Free Spins. During the bonus, one additional Free Spin is awarded for each Scatter landed. Wilds landing in the Devil Spins Bonus are Sticky until the free spins finish.{/fill} {fill}{color=#FFBF00}Magic Devil Bonus{/color} Landing both Stacked Wilds on reels 1 and 6 and 3 or more Scatters triggers the Magic Devil Bonus. 3 Scatters award an initial 5 Free spins. 4 Scatters award an initial 8 Free Spins. During the bonus, one additional Free Spin is awarded for each Scatter landed. Multiplier Sticky Wilds are randomly awarded on reels 2 to 5.{/fill} {fill}The Wilds that appear during the Bonus games randomly award extra multipliers (x2, x3, x4) capable of increasing the payout.{/fill}"
+mgd.info-gamerules-portrait-1,"{b}Game Rules{/b} {fill}Magic Devil is a 6-reel video slot game. The game has a Scatter symbol, a Wild symbol, and four High and Four low symbols. The Wild substitutes for all other symbols except Scatter. Free Spins are played at the bet of the triggering spin. {color=#FFBF00}Wild Respin Bonus{/color} Stacked Wilds on reels 1 and 6 award a Free Respin on reels 2 to 5. The Stacked Wilds on reel 1 and 6 will be sticky for that respin. The Free Respin randomly lands Wilds with x1, x2, x3, x4 Multipliers on reels 2 to 5. {fill}{color=#FFBF00}Devil Spins Bonus{/color} 3 or more Scatter symbols trigger Free Spins. 3 Scatters award an initial 5 free spins. 4 Scatters award an initial 8 Free Spins. An additional Free Spin is awarded for each additional Scatter. Wilds landing in the Devil Spins Bonus are Sticky until the free spins finish. {/fill} {fill}{color=#FFBF00}Magic Devil Bonus{/color} Landing both Stacked Wilds on reels 1 and 6 and 3 or more Scatters triggers the Magic Devil Bonus. 3 Scatters award an initial 5 free spins. 4 Scatters award an initial 8 Free Spins. Multiplier Sticky Wilds are randomly awarded on reels 2 to 5. During the bonus, one additional Free Spin is awarded for each Scatter landed.{/fill}"
+mgd.info-magic-devil-1,Stack Wilds and 3 or 4 SCATTERS to trigger FREE SPINS
+mgd.info-magic-devil-2,EXTRA free spins on scatters
+mgd.info-magic-devil-3,STICKY MULTIPLIER WILDS FOR BIG WINS UP TO
+mgd.info-magic-devil-4,"30,000x"
+mgd.info-paytable,All wins pay left to right provided they appear on adjacent reels. All winnings from winning ways are added together. Only highest win paid per winning way.
+mgd.info-wild-respin-1,STACKED WILDS on reels 1 and 6 trigger FREE RESPIN
+mgd.info-wild-respin-2,Win BIG with MULTIPLIER WILDS
+mgd.mgd92-sim,91.79%
+mgd.mgd94-sim,93.78%
+mgd.mgd96-sim,96.15%
+value.time-at,at

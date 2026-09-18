@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://SlotMachine/Scripts/Symbol.gd" type="Script" id=1]
+
+[node name="Symbol" type="Control"]
+margin_right = 110.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 110, 110 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource( 1 )
+
+[node name="SymbolContainer" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="SymbolImage" type="TextureRect" parent="SymbolContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+expand = true
+
+[node name="SymbolAnimated" type="SpineSprite" parent="SymbolContainer/SymbolImage"]
+visible = false
+position = Vector2( 54.7387, 54.6998 )
+scale = Vector2( 0.36279, 0.362843 )
+update_mode = 1
+
+[node name="SymbolImage_Blur" type="TextureRect" parent="SymbolContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+expand = true

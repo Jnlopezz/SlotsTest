@@ -1,0 +1,15 @@
+[remap]
+
+importer="codeandweb.texturepacker_import_spritesheet"
+type="Resource"
+path="res://.import/paylines.tpsheet-453d1ad8a0ba8bb841e5bbe5e97f4fde.res"
+
+[deps]
+
+files=[ "res://Visuals/Sprites/paylines.sprites/payline01.tres", "res://Visuals/Sprites/paylines.sprites/payline02.tres", "res://Visuals/Sprites/paylines.sprites/payline03.tres", "res://Visuals/Sprites/paylines.sprites/payline10.tres", "res://Visuals/Sprites/paylines.sprites/payline11.tres", "res://Visuals/Sprites/paylines.sprites/payline06.tres", "res://Visuals/Sprites/paylines.sprites/payline07.tres", "res://Visuals/Sprites/paylines.sprites/payline08.tres", "res://Visuals/Sprites/paylines.sprites/payline09.tres", "res://Visuals/Sprites/paylines.sprites/payline04.tres", "res://Visuals/Sprites/paylines.sprites/payline05.tres" ]
+
+source_file="res://Visuals/Sprites/paylines.tpsheet"
+dest_files=[ "res://.import/paylines.tpsheet-453d1ad8a0ba8bb841e5bbe5e97f4fde.res", "res://Visuals/Sprites/paylines.sprites/payline01.tres", "res://Visuals/Sprites/paylines.sprites/payline02.tres", "res://Visuals/Sprites/paylines.sprites/payline03.tres", "res://Visuals/Sprites/paylines.sprites/payline10.tres", "res://Visuals/Sprites/paylines.sprites/payline11.tres", "res://Visuals/Sprites/paylines.sprites/payline06.tres", "res://Visuals/Sprites/paylines.sprites/payline07.tres", "res://Visuals/Sprites/paylines.sprites/payline08.tres", "res://Visuals/Sprites/paylines.sprites/payline09.tres", "res://Visuals/Sprites/paylines.sprites/payline04.tres", "res://Visuals/Sprites/paylines.sprites/payline05.tres" ]
+
+[params]
+

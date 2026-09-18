@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://SlotMachine/Localizations/TopgamingLocalizationDefault - Italian.it.translation" ]
+
+source_file="res://SlotMachine/Localizations/TopgamingLocalizationDefault - Italian.csv"
+dest_files=[ "res://SlotMachine/Localizations/TopgamingLocalizationDefault - Italian.it.translation" ]
+
+[params]
+
+compress=true
+delimiter=0
