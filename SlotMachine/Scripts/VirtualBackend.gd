@@ -68,7 +68,6 @@ func _ready():
 
 func onConnectionRequest():
 	print("Connecting to Server...")
-	yield(pingTimer,"timeout")
 	onConnectionEstablished()
 
 func onConnectionEstablished():
@@ -84,7 +83,6 @@ func onConnectionEstablished():
 	connect("language_requested", self, "onLanguageRequest")
 	
 	emit_signal("connection_established", getPlayerData())
-	yield(pingTimer,"timeout")
 	current_game_mode = Enumerations.GAMESTATE.DEFAULT
 	
 

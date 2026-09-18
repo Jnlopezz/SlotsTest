@@ -73,8 +73,7 @@ func _prepare_game_hud():
 func _start_spin() -> void:
 	print("_start_spin")
 	# Spin Started
-#	backend.emit_signal("spin_requested")
-#	slot_visual.emit_signal("start_spin")
+	slot_visual.emit_signal("start_spin")
 	pass
 
 func _stop_spin() -> void:
@@ -83,7 +82,8 @@ func _stop_spin() -> void:
 
 func _on_slot_status_update(status) -> void:
 	print("_on_slot_status_update " + str(Enumerations.SLOTSTATE.keys()[status]))
-#	if status == Enumerations.SLOTSTATE.SPINNING:
+	if status == Enumerations.SLOTSTATE.SPINNING:
+		backend.emit_signal("spin_requested")
 	pass
 
 func _on_reel_stop(reelIndex: int) -> void:
@@ -100,7 +100,8 @@ func _on_slot_stopped() -> void:
 
 func _on_spin_result_ready(result: SpinResult) -> void:
 	print("_on_spin_result_ready\n" + result.printValues(["symbols", "totalWin"]))
-	pass
+	currentResult = result
+	slot_visual.emit_signal("stop_spin", result.symbols)
 
 func _on_quick_spin_toggle(value: bool) -> void:
 	pass

@@ -348,7 +348,7 @@ func stopSpin(symbolIndexes:Array):
 	reelMovementTween.tween_property(self, "scroll_position", -0.5, stopSpeed).as_relative().set_trans(stopTransition).set_ease(stopEase)
 	reelMovementTween.parallel().tween_callback(self, "emit_to_symbols", ["set_blur", false])
 	reelMovementTween.parallel().tween_callback(self, "onReelStopping", [])
-#	reelMovementTween.parallel().tween_property(self, "reel_state", Enumerations.REELSTATE.STOPPING, 0)
+	reelMovementTween.parallel().tween_property(self, "reel_state", Enumerations.REELSTATE.STOPPING, 0)
 	reelMovementTween.connect("finished", self, "onReelStopped")
 
 ## Skip Spin Animation and shows desired results by mimicing spin ending tween 
@@ -367,8 +367,8 @@ func skipSpin(symbolIndexes:Array):
 	scroll_position = stop_index + 0.5
 	reelMovementTween.tween_property(self,"scroll_position", stop_index, stopSpeed).set_trans(stopTransition).set_ease(stopEase)
 	reelMovementTween.parallel().tween_callback(self,"emit_to_symbols", ["set_blur", false])
-#		reelMovementTween.tween_callback(self, "onReelStopped")
-#		reelMovementTween.connect("finished", self, "onReelStopped")
+	reelMovementTween.tween_callback(self, "onReelStopped")
+	reelMovementTween.connect("finished", self, "onReelStopped")
 	onReelStopping()
 	reelMovementTween.tween_callback(self, "onReelStopped", [])
 

@@ -44,6 +44,7 @@ reel_symbols = [ ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResour
 hud_landscape_path = NodePath("../GameHUD")
 
 [node name="GameHUD" parent="." instance=ExtResource( 3 )]
+visible = false
 __meta__ = {
 "_edit_lock_": true
 }

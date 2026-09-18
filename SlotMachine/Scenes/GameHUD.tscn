@@ -22,9 +22,7 @@
 
 [node name="GameHUD" type="Control"]
 anchor_right = 1.0
-anchor_bottom = 0.122
-margin_top = -1041.0
-margin_bottom = 0.240005
+anchor_bottom = 1.0
 theme = ExtResource( 2 )
 script = ExtResource( 4 )
 active_button_color = Color( 0.960784, 0.811765, 0.141176, 1 )
@@ -110,7 +108,6 @@ expand = true
 stretch_mode = 6
 
 [node name="BurgerPanel" type="Button" parent="CanvasLayer/BottomPanel/BottomContainer/LeftPanel/LeftPanelContainer/MenuButton"]
-visible = false
 anchor_bottom = 1.0
 margin_top = -80.0
 margin_right = 66.0
