@@ -54,6 +54,7 @@ var isUpdating : bool = false
 onready var SymbolImage: TextureRect = $SymbolContainer/SymbolImage
 onready var SymbolImage_Blur: TextureRect = $SymbolContainer/SymbolImage_Blur
 onready var SymbolAnimated: SpineSprite = $SymbolContainer/SymbolImage/SymbolAnimated
+onready var SymbolMask : Light2D = $SymbolContainer/SymbolImage/SymbolMask
 onready var SymbolContainer = $SymbolContainer
 
 # FUNCTIONS
@@ -115,9 +116,9 @@ func setupSymbol(data:SymbolData):
 	SymbolImage.texture = data.image_static
 	SymbolImage_Blur.texture = data.image_blur
 	SymbolAnimated.skeleton_data_res = data.animation_data
+	SymbolMask.texture = data.image_mask
 	defaultAnimationName = data.defaultAnimationName
 	yield(get_tree(), "idle_frame")
-#	yield(get_tree(), "idle_frame")
 	isUpdating = false
 	emit_signal("symbol_is_updated")
 
@@ -170,17 +171,13 @@ func removeTint(tweenTime: float = 0):
 func playSymbolAnimation(animationName:String = ""):
 	SymbolAnimated.skeleton_data_res = null
 	SymbolAnimated.skeleton_data_res = symbolData.animation_data
-#	yield(get_tree(), "idle_frame")
 	SymbolAnimated.get_animation_state().set_animation(animationName if animationName else defaultAnimationName, false, 0)
-#	yield(get_tree(), "idle_frame")
 	SymbolAnimated.show()
-#	yield(get_tree(), "idle_frame")
-#	yield(get_tree(), "idle_frame")
+	SymbolMask.show()
 	SymbolAnimated.self_modulate.a = 1
 
 func stopSymbolAnimation():
 	SymbolAnimated.self_modulate.a = 0
-#	SymbolAnimated.get_animation_state().set_animation("idle", false, 0)
 	SymbolAnimated.hide()
 	
 func onSymbolAnimationCompleted(spine_sprite: Object, animation_state: Object, track_entry: Object):
@@ -207,7 +204,9 @@ func stopFrameAnimation(frameName:String = ""):
 func onResize():
 	var newScale = startScale * (rect_size.x / startSize)
 	SymbolAnimated.scale = Vector2(newScale, newScale)
+	SymbolMask.scale = Vector2(newScale, newScale)
 	SymbolAnimated.position = Vector2(rect_size.x / 2, rect_size.x / 2)
+	SymbolMask.position = Vector2(rect_size.x / 2, rect_size.x / 2)
 	for frameName in frames.keys():
 		frames[frameName].scale = Vector2(newScale, newScale)
 		frames[frameName].position = Vector2(rect_size.x / 2, rect_size.x / 2)
@@ -232,7 +231,7 @@ func runDebug():
 #	hideAllFrames()
 
 	var testTween = create_tween().set_loops(INF)
-#	testTween.tween_callback(self, "hideFrame", ["WinFrame"])
+	testTween.tween_callback(self, "hideFrame", ["WinFrame"])
 	testTween.tween_callback(self, "applyTint", [Color.dimgray, 0.3]).set_delay(1.0)
 	testTween.tween_callback(self, "removeTint", [0.3]).set_delay(1.0)
 	testTween.tween_property(self, "isBlurred", true, 1).set_delay(1.0)
@@ -241,11 +240,11 @@ func runDebug():
 	testTween.tween_callback(self, "stopSymbolAnimation").set_delay(1.0)
 	testTween.tween_callback(self, "emit_signal", ["hide_symbol"]).set_delay(1.0)
 	testTween.tween_callback(self, "emit_signal", ["show_symbol"]).set_delay(1.0)
-#	testTween.tween_callback(self, "showFrame", ["WinFrame"])
-#	testTween.tween_property(self, "frameExpand", 5, .4).set_trans(Tween.TRANS_SINE).set_delay(1)
-#	testTween.tween_property(self, "frameExpand", 0, .4).set_trans(Tween.TRANS_SINE)
-#	testTween.tween_property(self, "frameExpand", 5, .4).set_trans(Tween.TRANS_SINE)
-#	testTween.tween_property(self, "frameExpand", 0, .4).set_trans(Tween.TRANS_SINE)
+	testTween.tween_callback(self, "showFrame", ["WinFrame"])
+	testTween.tween_property(self, "frameExpand", 5, .4).set_trans(Tween.TRANS_SINE).set_delay(1)
+	testTween.tween_property(self, "frameExpand", 0, .4).set_trans(Tween.TRANS_SINE)
+	testTween.tween_property(self, "frameExpand", 5, .4).set_trans(Tween.TRANS_SINE)
+	testTween.tween_property(self, "frameExpand", 0, .4).set_trans(Tween.TRANS_SINE)
 
 # END OF DEBUG SEQUENCE
 

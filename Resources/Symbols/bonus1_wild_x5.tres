@@ -1,14 +1,16 @@
-[gd_resource type="Resource" load_steps=4 format=2]
+[gd_resource type="Resource" load_steps=5 format=2]
 
 [ext_resource path="res://SlotMachine/Scripts/SymbolData.gd" type="Script" id=1]
 [ext_resource path="res://Visuals/Sprites/symbol_wild_multipliers/wild_x5.webp" type="Texture" id=2]
 [ext_resource path="res://Animations/SymbolAnimations/BonusSymbols/bonus1_wild_x5.tres" type="SpineSkeletonDataResource" id=3]
+[ext_resource path="res://Visuals/Sprites/bonus_mask.png" type="Texture" id=4]
 
 [resource]
 script = ExtResource( 1 )
 image_path = "res://Visuals/Sprites/symbol_wild_multipliers/wild_x5.webp"
 image_static = ExtResource( 2 )
 image_blur = ExtResource( 2 )
+image_mask = ExtResource( 4 )
 is_pseudo = false
 rect_size = 200.0
 animation_data = ExtResource( 3 )

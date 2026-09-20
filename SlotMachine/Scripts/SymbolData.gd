@@ -4,6 +4,7 @@ extends Resource
 export var image_path: String
 export var image_static: Texture
 export var image_blur: Texture
+export var image_mask : Texture
 export var is_pseudo: bool
 export var rect_size: float
 export var animation_data: SpineSkeletonDataResource

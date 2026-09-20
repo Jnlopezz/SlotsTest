@@ -43,6 +43,7 @@ signal set_symbol_orders
 ## Default Z Order for winning symbols
 ## Not Constant! Set during start by the reel sizes
 var Z_ORDER_WIN
+const PAYLINE_PATH = "res://Visuals/Sprites/paylines.sprites/%s.tres"
 
 # EXPORT VARIABLES 
 #####################################
@@ -59,6 +60,12 @@ export var stopDelayBetweenReels_quick: float
 
 # Contains symbols
 export(NodePath) var reelContainer: NodePath
+export(NodePath) var paylineContainer: NodePath
+
+# Demo Symbol Visual Path
+export(Array, Resource) var reel_symbols = []
+export(Array, Resource) var paylines_array = []
+
 ## Delay Multiplier for Anticipating Reels
 ## Can be modified with "set_anticipation_delay
 export var stopDelayBetweenReels_Anticipation: float
@@ -91,6 +98,8 @@ var isQuickMode:bool = false
 ## Prior SymbolIndex overrides the latter SymbolIndex
 ## If it doesnt exists in Dictionary it applies regular ordering
 var SymbolZPriorities:Dictionary = {}
+## Tween paylines
+var paylineTween : SceneTreeTween
 
 # FUNCTIONS
 #####################################
@@ -101,7 +110,7 @@ func _ready():
 	if reels == null or reels.size() == 0:
 		printerr("Reels are not initialized. Terminating...")
 		get_tree().quit()
-	connect("create_slot_symbols", self, "createSymbols")
+#	connect("create_slot_symbols", self, "createSymbols")
 	connect("create_anticipation_frame", self, "createAnticipationFrame")
 	connect("set_animation_speed", self, "setAnimationSpeed")
 	connect("set_anticipation_reels", self, "setAnticipationReels")
@@ -116,15 +125,14 @@ func _ready():
 	connect("set_quick_mode", self, "onSetQuickMode")
 	connect("set_symbol_orders", self, "setSymbolOrders")
 	
-#	yield(get_tree(), "idle_frame")
-	emit_signal("create_slot_symbols", reel_symbols, pseudo_symbol_indexes, [3,3,3,3,3]) #For Debugging Symbols
+	
+	createSymbols(reel_symbols, pseudo_symbol_indexes, [3,3,3,3,3])
 
 # SIGNAL FUNCTIONS
 #####################################
 
 ## Creates Reels with given Symbol Visual Paths.
 func createSymbols(SymbolArray, PseudoReelIndexes, rowCounts):
-	
 	symbolIndexes = []
 	symbolIndexes.resize(reels.size())
 	
@@ -150,11 +158,15 @@ func createSymbols(SymbolArray, PseudoReelIndexes, rowCounts):
 func onStartSpin(reelIndexes = []):
 	if slot_status != Enumerations.SLOTSTATE.READY:
 		return
+		
 	set_slot_status(Enumerations.SLOTSTATE.SPIN_BEGIN)
 	
 	anticipationReelIndexes = []
 	
 	slotSpinTween = create_tween().set_speed_scale(animationSpeed)
+	#clear paylines
+	for node in get_node(paylineContainer).get_children():
+		node.queue_free()
 	
 	# Highlight all symbols before Spin
 	highlightAllSymbols()
@@ -227,16 +239,15 @@ func onSkipSpin(reelSymbols: Array):
 				symbolIndexes[reelIndex] = reelSymbols[reelIndex].duplicate(true)
 
 func onReelStopped(reelIndex):
-		
 	emit_signal("on_reel_stopped", reelIndex)
 #	reels[reelIndex].emit_signal("hide_frame", Enumerations.AnticipationFX)
 #	print(str(Time.get_ticks_msec()))
 		
 	if checkReelsReady() == true:
 		yield(get_tree(), "idle_frame")
-		set_slot_status(Enumerations.SLOTSTATE.READY)
-#		print_debug("current state: READY")
+		set_slot_status(Enumerations.SLOTSTATE.STOPPED)
 		emit_signal("on_slot_stopped")
+	
 	else: ## Not Ready
 		if anticipationReelIndexes.has(reelIndex+1):
 			reels[reelIndex+1].emit_signal("anticipation_reel")
@@ -293,6 +304,53 @@ func updateSymbols(symbolDatas: Array):
 			if symbolDatas[colIndex][rowIndex]:
 				updateSymbol(colIndex, rowIndex, symbolDatas[colIndex][rowIndex])
 
+
+func onWinState(paylineId : Array) -> void:
+	get_node(paylineContainer).modulate.a = 0.0
+	
+	for line in paylineId:
+		var paylineNode = Sprite.new()
+		var payline_data : PaylineData = paylines_array[line - 1]
+		
+		paylineNode.texture = payline_data.texture
+		paylineNode.offset = payline_data.offset
+		
+		var y = 0.0
+	
+		match payline_data.position:
+			payline_data.POSITIONS.UP:
+				y = rect_size.y / 6
+
+			payline_data.POSITIONS.CENTER:
+				y = rect_size.y / 2
+
+			payline_data.POSITIONS.DOWN:
+				y = rect_size.y * 5 / 6
+
+		paylineNode.position = Vector2(rect_size.x / 2, y)
+		paylineNode.z_index = 100
+		
+		get_node(paylineContainer).add_child(paylineNode)
+		animatePayline()
+
+
+func animatePayline() -> void:
+	if paylineTween:
+		paylineTween.kill()
+	
+	paylineTween = create_tween().set_loops(INF)
+	paylineTween.set_trans(Tween.TRANS_QUAD)
+	paylineTween.tween_property(
+		get_node(paylineContainer),
+		"modulate:a",
+		1.0, 0.3)
+	
+	paylineTween.tween_property(
+		get_node(paylineContainer),
+		"modulate:a",
+		0.4, 0.5)
+		
+
 # HELPER FUNCTIONS
 #####################################
 
@@ -323,9 +381,6 @@ func emitAllReels(signalMessage:String, params:Array=[]):
 # DEBUG VARIABLES
 # Used for Debugging and Testing the scene seperately.
 #####################################
-
-# Demo Symbol Visual Path
-export(Array, Resource) var reel_symbols = []
 
 var pseudo_symbol_indexes:Array =[
 			[

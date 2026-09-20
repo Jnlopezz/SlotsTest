@@ -1,15 +1,17 @@
-[gd_resource type="Resource" load_steps=5 format=2]
+[gd_resource type="Resource" load_steps=6 format=2]
 
 [ext_resource path="res://SlotMachine/Scripts/SymbolData.gd" type="Script" id=1]
 [ext_resource path="res://Animations/SymbolAnimations/L5-Soap.tres" type="SpineSkeletonDataResource" id=2]
 [ext_resource path="res://Visuals/Sprites/symbols_static_temp/l5.png" type="Texture" id=3]
 [ext_resource path="res://Visuals/Sprites/symbols_blur.sprites/l5.tres" type="Texture" id=4]
+[ext_resource path="res://Visuals/Sprites/soap_mask.png" type="Texture" id=5]
 
 [resource]
 script = ExtResource( 1 )
 image_path = "res://Visuals/Sprites/symbols_static.sprites/l5_soap.tres"
 image_static = ExtResource( 3 )
 image_blur = ExtResource( 4 )
+image_mask = ExtResource( 5 )
 is_pseudo = false
 rect_size = 200.0
 animation_data = ExtResource( 2 )

@@ -414,6 +414,7 @@ func onAnimateSymbols(symbolIndexes = [], animationName = ""):
 	if symbolIndexes.size() == 0:
 		emit_to_symbols("remove_tint", tintDuration)
 		emit_to_symbols("play_symbol_animation", animationName)
+	
 	for index in symbolIndexes:
 		if index != null: 
 			symbols[getScreenIndex(index) + offscreen_symbol_count].emit_signal("remove_tint", tintDuration)

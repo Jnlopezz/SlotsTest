@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://SlotMachine/Scripts/Symbol.gd" type="Script" id=1]
+[ext_resource path="res://Visuals/Sprites/symbols_mask.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Symbols/l1_soap.tres" type="Resource" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 300, 300, 300, 300 )
 
 [node name="Symbol" type="Control"]
 margin_right = 110.0
@@ -9,6 +16,7 @@ rect_min_size = Vector2( 110, 110 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource( 1 )
+symbolData = ExtResource( 3 )
 
 [node name="SymbolContainer" type="Control" parent="."]
 anchor_right = 1.0
@@ -23,9 +31,18 @@ expand = true
 
 [node name="SymbolAnimated" type="SpineSprite" parent="SymbolContainer/SymbolImage"]
 visible = false
-position = Vector2( 54.7387, 54.6998 )
 scale = Vector2( 0.36279, 0.362843 )
+z_index = 10
 update_mode = 1
+
+[node name="SymbolMask" type="Light2D" parent="SymbolContainer/SymbolImage"]
+visible = false
+texture = SubResource( 1 )
+mode = 3
+range_height = 619.0
+range_z_min = 0
+range_layer_max = 100
+range_item_cull_mask = 16
 
 [node name="SymbolImage_Blur" type="TextureRect" parent="SymbolContainer"]
 visible = false

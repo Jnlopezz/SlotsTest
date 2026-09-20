@@ -62,41 +62,56 @@ func _prepare_slot_visual():
 	slot_visual.connect("on_reel_stopping", self, "_on_reel_stopping")
 	slot_visual.connect("on_reel_stopped", self, "_on_reel_stop")
 	slot_visual.connect("on_slot_stopped", self, "_on_slot_stopped")
-	pass
 
 func _prepare_game_hud():
 	game_hud.emit_signal("on_main_message_updated", tr("message.press-spin"))
 	game_hud.emit_signal("on_bet_amount_updated", backend.betAmounts[backend.currentBetIndex])
 	game_hud.emit_signal("on_balance_updated", backend.balance)
-	pass
 
 func _start_spin() -> void:
 	print("_start_spin")
 	# Spin Started
 	slot_visual.emit_signal("start_spin")
-	pass
+	game_hud.emit_signal("on_main_message_updated", tr('message.greeting'))
 
 func _stop_spin() -> void:
 	print("_stop_spin" + str(currentResult))
-	pass
+
 
 func _on_slot_status_update(status) -> void:
 	print("_on_slot_status_update " + str(Enumerations.SLOTSTATE.keys()[status]))
-	if status == Enumerations.SLOTSTATE.SPINNING:
-		backend.emit_signal("spin_requested")
-	pass
+	match status:
+		Enumerations.SLOTSTATE.SPINNING:
+			backend.emit_signal("spin_requested")
+		
+		Enumerations.SLOTSTATE.SHOW_WIN:
+			slot_visual.onWinState(currentResult.paylineId)
+			game_hud.emit_signal("on_win_message_updated", currentResult.totalWin, tr('message.won-spins'))
+			slot_visual.set_slot_status(Enumerations.SLOTSTATE.READY)
+		
 
 func _on_reel_stop(reelIndex: int) -> void:
-#	print("_on_reel_stop" + str(reelIndex))
-	pass
+	var win_symbols_in_index = []
+	
+	for win in currentResult.winSymbolPositions:
+		if reelIndex < win.size():
+			win_symbols_in_index.append(win[reelIndex])
+		
+	if win_symbols_in_index.size() > 0:
+		slot_visual.animateSymbol(reelIndex, win_symbols_in_index)
+
 
 func _on_reel_stopping(reelIndex: int) -> void:
-#	print("_on_reel_stopping" + str(reelIndex))
 	pass
 
+
 func _on_slot_stopped() -> void:
-	print("_on_slot_stopped")
-	pass
+	if currentResult.totalWin > 0:
+		slot_visual.set_slot_status(Enumerations.SLOTSTATE.SHOW_WIN)
+	else:
+		game_hud.emit_signal("on_main_message_updated", tr('message.press-click-spin'))
+		slot_visual.set_slot_status(Enumerations.SLOTSTATE.READY)
+
 
 func _on_spin_result_ready(result: SpinResult) -> void:
 	print("_on_spin_result_ready\n" + result.printValues(["symbols", "totalWin"]))

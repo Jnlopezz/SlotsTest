@@ -187,25 +187,29 @@ func updateMessage(mainMessage:String = "", secondaryMessage:String = ""):
 	updateSecondaryMessage(secondaryMessage)
 
 func updateWinMessage(winAmount: float, winMessage: String, startingWinAmount:float = 0):
+	var message = tr(winMessage).replace("{" + tr("amount") + "}", "%s")
+	
 	if totalWinTextTween:
 		totalWinTextTween.custom_step(text_count_duration)
 		totalWinTextTween.kill()
 	totalWinTextTween = create_tween().set_trans(text_count_transition).set_ease(text_count_ease)
-	totalWinTextTween.tween_method(self, "tweenTextMessage", startingWinAmount * 100.0, winAmount * 100.0, text_count_duration, [text_main_message, winMessage])
+	totalWinTextTween.tween_method(self, "tweenTextMessage", startingWinAmount * 100.0, winAmount * 100.0, text_count_duration, [text_main_message, message])
 	totalWinTextTween.tween_callback(self, "updateMainMessageScale")
+	
 
 func tweenTextMessage(value, targetText, messageText = ""):
 	if targetText is RichTextLabel:
 		if messageText == "":
 			targetText.bbcode_text = "%.2f" % (value / 100)
 		else:
-			targetText.bbcode_text = tr(messageText) % formatCurrencyText(value / 100, currencySymbol)
+			targetText.bbcode_text = "[center]%s[/center]" % (
+				(messageText % formatCurrencyText(value / 100, currencySymbol)).to_upper())
+
 	elif targetText is Label:
 		if messageText == "":
 			targetText.text = "%.2f" % (value / 100)
 		else:
-			targetText.text = tr(messageText) % (value / 100)
-			print("value: %.0f" % value)
+			targetText.text = (messageText % (value / 100)).to_upper()
 
 # Button Signal Connections
 func setupButtonSignals() -> void:

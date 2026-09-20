@@ -9,7 +9,11 @@ anchor_bottom = 1.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 1253.0 ]
+}
 reelContainer = NodePath("SlotArea/HBoxContainer")
+paylineContainer = NodePath("PaylineContainer")
 
 [node name="SlotArea" type="Control" parent="."]
 anchor_right = 1.0
@@ -105,3 +109,7 @@ startSpeed = 0.3
 stopTransition = 9
 stopSpeed = 0.25
 pseudoReelIndexes = [ 3, 4, 2, 1, 4, 0, 1, 2, 0, 0 ]
+
+[node name="PaylineContainer" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
