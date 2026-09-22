@@ -187,7 +187,8 @@ func updateMessage(mainMessage:String = "", secondaryMessage:String = ""):
 	updateSecondaryMessage(secondaryMessage)
 
 func updateWinMessage(winAmount: float, winMessage: String, startingWinAmount:float = 0):
-	var message = tr(winMessage).replace("{" + tr("amount") + "}", "%s")
+	var amount_key = "{" + tr("message.amount") + "}"
+	var message = tr(winMessage).replace(amount_key, "%s")
 	
 	if totalWinTextTween:
 		totalWinTextTween.custom_step(text_count_duration)

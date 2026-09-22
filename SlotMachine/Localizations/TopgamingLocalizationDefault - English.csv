@@ -45,6 +45,7 @@ message.click-anywhere,Click anywhere to continue
 message.click-for-respin,Click for free respin
 message.congratulation,Congratulations
 message.do-better,You could do better
+message.amount,amount
 message.greeting,Good luck!
 message.max-payout-reached,Max payout reached!
 message.press-click-spin,Press Spin Button
@@ -72,4 +73,3 @@ mgd.mgd92-sim,91.79%
 mgd.mgd94-sim,93.78%
 mgd.mgd96-sim,96.15%
 value.time-at,at
-amount,amount

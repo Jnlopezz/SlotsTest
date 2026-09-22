@@ -267,6 +267,8 @@ func setAnimationSpeed(value: float):
 ## It effects Spin and Stop animations
 func onSetQuickMode(value: bool):
 	isQuickMode = value
+	setAnimationSpeed(1.5 if isQuickMode else 1.0)
+
 
 ## Blackouts Symbols in all reels
 func blackoutAllSymbols():

@@ -99,6 +99,8 @@ func _on_reel_stop(reelIndex: int) -> void:
 		
 	if win_symbols_in_index.size() > 0:
 		slot_visual.animateSymbol(reelIndex, win_symbols_in_index)
+	
+	print(currentResult.isBonusTriggered)
 
 
 func _on_reel_stopping(reelIndex: int) -> void:
@@ -118,8 +120,9 @@ func _on_spin_result_ready(result: SpinResult) -> void:
 	currentResult = result
 	slot_visual.emit_signal("stop_spin", result.symbols)
 
+
 func _on_quick_spin_toggle(value: bool) -> void:
-	pass
+	slot_visual.onSetQuickMode(value)
 
 func _on_turbo_spin_toggle(value: bool) -> void:
 	pass

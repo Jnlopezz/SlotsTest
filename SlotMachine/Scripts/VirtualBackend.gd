@@ -20,7 +20,7 @@ const DEFAULT_GAME_DATA = {
 		{
 		"balance":99999, 
 		"currency":"EUR", 
-		"locale":"it", 
+		"locale":"en", 
 		}, 
 	"gameData":
 		{
@@ -60,6 +60,7 @@ const lines = [
 		]
 
 const wildSymbolIndex = 4
+const scatterSymbolIndex = 5
 
 onready var pingTimer: Timer = $PingTimer
 
@@ -71,7 +72,7 @@ func onConnectionRequest():
 	onConnectionEstablished()
 
 func onConnectionEstablished():
-	
+	TranslationServer.set_locale(getPlayerData().get("locale"))
 	balance = getPlayerData().get("balance", 1000)/100
 	
 	connect("spin_requested", self, "onGameSpinRequest")

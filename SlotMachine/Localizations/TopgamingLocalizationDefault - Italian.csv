@@ -45,6 +45,7 @@ message.click-anywhere,Fare clic in un punto qualsiasi per continuare
 message.click-for-respin,Fare clic per un respin gratuito
 message.congratulation,Congratulazioni
 message.do-better,Potresti fare di meglio
+message.amount,importo
 message.greeting,Buona fortuna!
 message.max-payout-reached,Pagamento massimo raggiunto!
 message.won-spins,Hai vinto {importo}
