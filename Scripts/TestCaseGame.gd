@@ -85,22 +85,18 @@ func _on_slot_status_update(status) -> void:
 			backend.emit_signal("spin_requested")
 		
 		Enumerations.SLOTSTATE.SHOW_WIN:
-			slot_visual.onWinState(currentResult.paylineId)
-			game_hud.emit_signal("on_win_message_updated", currentResult.totalWin, tr('message.won-spins'))
 			slot_visual.set_slot_status(Enumerations.SLOTSTATE.READY)
-		
+			game_hud.emit_signal("on_main_message_updated", tr('message.press-click-spin'))
+			slot_visual.emit_signal("show_win_result", currentResult)
+			
+			if currentResult.totalWin > 0:
+				game_hud.emit_signal("on_win_message_updated", currentResult.totalWin, tr('message.won-spins'))
 
 func _on_reel_stop(reelIndex: int) -> void:
-	var win_symbols_in_index = []
-	
-	for win in currentResult.winSymbolPositions:
-		if reelIndex < win.size():
-			win_symbols_in_index.append(win[reelIndex])
-		
-	if win_symbols_in_index.size() > 0:
-		slot_visual.animateSymbol(reelIndex, win_symbols_in_index)
-	
-	print(currentResult.isBonusTriggered)
+	var combined = currentResult.getCombinedWinPositions()
+
+	if reelIndex < combined.size():
+		slot_visual.animateSymbol(reelIndex, combined[reelIndex])
 
 
 func _on_reel_stopping(reelIndex: int) -> void:
@@ -108,11 +104,7 @@ func _on_reel_stopping(reelIndex: int) -> void:
 
 
 func _on_slot_stopped() -> void:
-	if currentResult.totalWin > 0:
-		slot_visual.set_slot_status(Enumerations.SLOTSTATE.SHOW_WIN)
-	else:
-		game_hud.emit_signal("on_main_message_updated", tr('message.press-click-spin'))
-		slot_visual.set_slot_status(Enumerations.SLOTSTATE.READY)
+	slot_visual.set_slot_status(Enumerations.SLOTSTATE.SHOW_WIN)
 
 
 func _on_spin_result_ready(result: SpinResult) -> void:

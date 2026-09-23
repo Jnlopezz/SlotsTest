@@ -59,8 +59,7 @@ const lines = [
 		[1,2,1,2,1],
 		]
 
-const wildSymbolIndex = 4
-const scatterSymbolIndex = 5
+const wildSymbolIndex = 5
 
 onready var pingTimer: Timer = $PingTimer
 
@@ -128,31 +127,39 @@ func createDefaultResult(data: Dictionary = {}):
 	if current_result_index >= results_queue.size():
 		current_result_index = 0
 	
+	result.isBonusTriggered = false
 	result.winlineSymbolCounts = []
 	result.winlineSymbols = []
 	result.winSymbolPositions = []
 	result.paylineId = []
+	result.wildMultipliers = []
+	result.wildSymbolPositions = []
 	result.winlineWinAmounts = calculateWinAmounts(result.symbols)
 	result.totalWin = result.getTotalWin()
 
 func calculateWinAmounts(symbols):
 	var resultArray = []
 	
+	getWildMiltipliers(symbols)
+	
 	for i in range(lines.size()):
 		var lineResult = ""
-		var multiplier = 1
 		var lineChar = ""
+		var multiplier = 1
 		
 		for index in symbols.size():
 			if symbols[index][lines[i][index]] == wildSymbolIndex:
 				lineResult += "w"
+				
 				if result.wildMultipliers && result.wildMultipliers[index] && result.wildMultipliers[index][lines[i][index]]:
-					multiplier *= result.wildMultipliers[index][lines[i][index]] 
+					multiplier = result.wildMultipliers[index][lines[i][index]]
+				
 			else:
 				lineResult += str(symbols[index][lines[i][index]])
 				# Handle Wild
 				if lineChar == "":
 					lineChar = str(symbols[index][lines[i][index]]) # Will be replaced with wild symbols later-on
+		
 		if lineChar != "": # Replace if there is a non-wild symbol in line
 			lineResult = lineResult.replace("w", lineChar)
 			
@@ -188,7 +195,7 @@ func calculateWinAmounts(symbols):
 			result.winSymbolPositions.push_front([lines[i][0], lines[i][1]])
 			result.paylineId.push_front(i+1)
 			result.winFactor += paytable[lineResult.left(2)]
-			
+	
 	return resultArray
 
 func getTotalWinAmount(winArray):
@@ -196,6 +203,22 @@ func getTotalWinAmount(winArray):
 	for i in winArray:
 		total+=i
 	return total
+
+
+func getWildMiltipliers(symbols) -> void:
+	var counter := 0
+#	
+	for index in symbols.size():
+		result.wildMultipliers.append([])
+		for i in symbols[index].size():
+			if symbols[index][i] == wildSymbolIndex:
+				counter += 1
+				result.wildMultipliers[index].append(counter)
+				result.wildSymbolPositions.append([index, i])
+				result.isBonusTriggered = true
+			else:
+				result.wildMultipliers[index].append(null)
+	print(result.wildSymbolPositions)
 
 func getGameData():
 	return DEFAULT_GAME_DATA

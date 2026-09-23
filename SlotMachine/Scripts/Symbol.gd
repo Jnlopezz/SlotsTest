@@ -54,8 +54,8 @@ var isUpdating : bool = false
 onready var SymbolImage: TextureRect = $SymbolContainer/SymbolImage
 onready var SymbolImage_Blur: TextureRect = $SymbolContainer/SymbolImage_Blur
 onready var SymbolAnimated: SpineSprite = $SymbolContainer/SymbolImage/SymbolAnimated
-onready var SymbolMask : Light2D = $SymbolContainer/SymbolImage/SymbolMask
 onready var SymbolContainer = $SymbolContainer
+
 
 # FUNCTIONS
 #####################################
@@ -116,7 +116,6 @@ func setupSymbol(data:SymbolData):
 	SymbolImage.texture = data.image_static
 	SymbolImage_Blur.texture = data.image_blur
 	SymbolAnimated.skeleton_data_res = data.animation_data
-	SymbolMask.texture = data.image_mask
 	defaultAnimationName = data.defaultAnimationName
 	yield(get_tree(), "idle_frame")
 	isUpdating = false
@@ -173,7 +172,6 @@ func playSymbolAnimation(animationName:String = ""):
 	SymbolAnimated.skeleton_data_res = symbolData.animation_data
 	SymbolAnimated.get_animation_state().set_animation(animationName if animationName else defaultAnimationName, false, 0)
 	SymbolAnimated.show()
-	SymbolMask.show()
 	SymbolAnimated.self_modulate.a = 1
 
 func stopSymbolAnimation():
@@ -204,9 +202,7 @@ func stopFrameAnimation(frameName:String = ""):
 func onResize():
 	var newScale = startScale * (rect_size.x / startSize)
 	SymbolAnimated.scale = Vector2(newScale, newScale)
-	SymbolMask.scale = Vector2(newScale, newScale)
 	SymbolAnimated.position = Vector2(rect_size.x / 2, rect_size.x / 2)
-	SymbolMask.position = Vector2(rect_size.x / 2, rect_size.x / 2)
 	for frameName in frames.keys():
 		frames[frameName].scale = Vector2(newScale, newScale)
 		frames[frameName].position = Vector2(rect_size.x / 2, rect_size.x / 2)

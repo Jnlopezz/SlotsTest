@@ -15,7 +15,6 @@ extends Control
 
 signal create_slot_symbols
 signal create_anticipation_frame
-signal show_win
 signal animate_symbol
 signal blackout_all_symbols
 signal highlight_all_symbols
@@ -36,6 +35,7 @@ signal update_symbols
 signal update_symbol
 signal set_quick_mode
 signal set_symbol_orders
+signal show_win_result
 
 # CONSTANTS
 #####################################
@@ -57,14 +57,20 @@ export var startDelayBetweenReels: float
 export var stopDelayBetweenReels: float
 # Defines reels stop time after previous reel stop during the QuickSpin
 export var stopDelayBetweenReels_quick: float
+# Wild effect texture
+export var wildEffectTexture: Texture
 
 # Contains symbols
 export(NodePath) var reelContainer: NodePath
+# Contains paylines
 export(NodePath) var paylineContainer: NodePath
+# Contains molotovs
+export(NodePath) var molotovContainer: NodePath
 
 # Demo Symbol Visual Path
 export(Array, Resource) var reel_symbols = []
 export(Array, Resource) var paylines_array = []
+export(PackedScene) var molotov
 
 ## Delay Multiplier for Anticipating Reels
 ## Can be modified with "set_anticipation_delay
@@ -100,6 +106,12 @@ var isQuickMode:bool = false
 var SymbolZPriorities:Dictionary = {}
 ## Tween paylines
 var paylineTween : SceneTreeTween
+## store current payline
+var currentPaylines : Array
+#store current molotov effect
+var currentMolotovIndex : Array
+#store current molotov effect
+var currentMolotovMultiplier : Array
 
 # FUNCTIONS
 #####################################
@@ -116,6 +128,7 @@ func _ready():
 	connect("set_anticipation_reels", self, "setAnticipationReels")
 	connect("emit_all_reels", self, "emitAllReels")
 	connect("animate_symbol", self, "animateSymbol")
+	connect("show_win_result", self, "onShowWin")
 	connect("blackout_all_symbols", self, "blackoutAllSymbols")
 	connect("highlight_all_symbols", self, "highlightAllSymbols")
 	connect("stop_all_symbols", self, "stopAllSymbols")
@@ -125,7 +138,7 @@ func _ready():
 	connect("set_quick_mode", self, "onSetQuickMode")
 	connect("set_symbol_orders", self, "setSymbolOrders")
 	
-	
+	get_node(molotovContainer).connect("tween_ended", self, "onMolotovEnded")
 	createSymbols(reel_symbols, pseudo_symbol_indexes, [3,3,3,3,3])
 
 # SIGNAL FUNCTIONS
@@ -164,9 +177,13 @@ func onStartSpin(reelIndexes = []):
 	anticipationReelIndexes = []
 	
 	slotSpinTween = create_tween().set_speed_scale(animationSpeed)
+	
 	#clear paylines
 	for node in get_node(paylineContainer).get_children():
 		node.queue_free()
+	
+	# clear molotov effect
+	get_node(molotovContainer).clearEffect()
 	
 	# Highlight all symbols before Spin
 	highlightAllSymbols()
@@ -256,6 +273,75 @@ func onReelStopped(reelIndex):
 func onReelStopping(reelIndex):
 	emit_signal("on_reel_stopping", reelIndex)
 
+
+func onShowWin(result: SpinResult) -> void:
+	currentPaylines = result.paylineId
+	currentMolotovIndex = result.wildSymbolPositions
+	currentMolotovMultiplier = result.wildMultipliers
+	
+	if result.isBonusTriggered && currentMolotovIndex.size() >= 2:
+		showMolotov()
+		return
+	
+	showPaylines()
+
+
+func showMolotov() -> void:
+	var currentWild = currentMolotovIndex[0]
+	currentMolotovIndex.pop_front()
+	
+	var multiplier = 0
+	for wild in currentMolotovIndex:
+		var start : Vector2 = reels[currentWild[0]].getSymbolPosition(currentWild[1])
+		var end : Vector2 = reels[wild[0]].getSymbolPosition(wild[1])
+		
+		if multiplier == 0: 
+			multiplier = currentMolotovMultiplier[wild[0]][wild[1]]
+		
+		get_node(molotovContainer).aminEffect(wild, molotov, start, end, multiplier)
+
+
+func onMolotovEnded(wild: Array, multiplier: int) -> void:
+	var new_data :SymbolData = reel_symbols[multiplier + 4]
+	reels[wild[0]].updateSymbolData(wild[1], new_data)
+	reels[wild[0]].onAnimateSymbols(wild)
+	
+	if currentMolotovIndex.size() <= 1:
+		showPaylines()
+		return
+	
+	showMolotov()
+
+
+func showPaylines() -> void:
+	get_node(paylineContainer).modulate.a = 0.0
+	
+	for line in currentPaylines:
+		var paylineNode = Sprite.new()
+		var payline_data : PaylineData = paylines_array[line - 1]
+		
+		paylineNode.texture = payline_data.texture
+		paylineNode.offset = payline_data.offset
+		
+		var y = 0.0
+		
+		match payline_data.position:
+			payline_data.POSITIONS.UP:
+				y = rect_size.y / 6
+			
+			payline_data.POSITIONS.CENTER:
+				y = rect_size.y / 2
+			
+			payline_data.POSITIONS.DOWN:
+				y = rect_size.y * 5 / 6
+			
+		paylineNode.position = Vector2(rect_size.x / 2, y)
+		paylineNode.z_index = 100
+		
+		get_node(paylineContainer).add_child(paylineNode)
+		animatePayline()
+
+
 ## Modify the animationSpeed value
 ## It effects the spin and stop tweens speed scales
 func setAnimationSpeed(value: float):
@@ -305,35 +391,6 @@ func updateSymbols(symbolDatas: Array):
 		for rowIndex in symbolDatas[colIndex].size():
 			if symbolDatas[colIndex][rowIndex]:
 				updateSymbol(colIndex, rowIndex, symbolDatas[colIndex][rowIndex])
-
-
-func onWinState(paylineId : Array) -> void:
-	get_node(paylineContainer).modulate.a = 0.0
-	
-	for line in paylineId:
-		var paylineNode = Sprite.new()
-		var payline_data : PaylineData = paylines_array[line - 1]
-		
-		paylineNode.texture = payline_data.texture
-		paylineNode.offset = payline_data.offset
-		
-		var y = 0.0
-	
-		match payline_data.position:
-			payline_data.POSITIONS.UP:
-				y = rect_size.y / 6
-
-			payline_data.POSITIONS.CENTER:
-				y = rect_size.y / 2
-
-			payline_data.POSITIONS.DOWN:
-				y = rect_size.y * 5 / 6
-
-		paylineNode.position = Vector2(rect_size.x / 2, y)
-		paylineNode.z_index = 100
-		
-		get_node(paylineContainer).add_child(paylineNode)
-		animatePayline()
 
 
 func animatePayline() -> void:

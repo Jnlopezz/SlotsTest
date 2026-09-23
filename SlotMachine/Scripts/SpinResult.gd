@@ -18,6 +18,7 @@ var winFactor
 var totalWinFactor
 var roundId
 var wildMultipliers
+var wildSymbolPositions
 var winlineMultiplier
 var paylineId
 

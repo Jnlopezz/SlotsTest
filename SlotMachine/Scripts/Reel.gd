@@ -528,6 +528,11 @@ func updateSymbolData(symbolIndex: int, symbolData: SymbolData):
 	
 # HELPER FUNCTIONS
 #####################################
+func getSymbolPosition(index: int) -> Vector2:
+	var child_index = getScreenIndex(index) + offscreen_symbol_count
+	var symbol = container.get_child(child_index)
+
+	return symbol.rect_global_position + symbol.rect_size / 2
 
 ## Updates symbol visuals at the result indexes
 func resolveResultSymbols(symbolArray) -> int:
