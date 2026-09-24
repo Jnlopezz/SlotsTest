@@ -336,7 +336,7 @@ func showPaylines() -> void:
 				y = rect_size.y * 5 / 6
 			
 		paylineNode.position = Vector2(rect_size.x / 2, y)
-		paylineNode.z_index = 100
+		paylineNode.z_index = 9
 		
 		get_node(paylineContainer).add_child(paylineNode)
 		animatePayline()

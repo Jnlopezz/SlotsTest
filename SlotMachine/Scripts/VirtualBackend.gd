@@ -20,7 +20,7 @@ const DEFAULT_GAME_DATA = {
 		{
 		"balance":99999, 
 		"currency":"EUR", 
-		"locale":"en", 
+		"locale":"it", 
 		}, 
 	"gameData":
 		{
@@ -218,7 +218,6 @@ func getWildMiltipliers(symbols) -> void:
 				result.isBonusTriggered = true
 			else:
 				result.wildMultipliers[index].append(null)
-	print(result.wildSymbolPositions)
 
 func getGameData():
 	return DEFAULT_GAME_DATA
